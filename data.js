@@ -334,3 +334,21 @@ const jobs = [
   // In the real file, you can continue similarly upto 60+.
   // I'll stop adding here, but the pattern is clear. Expand as needed.
 ];
+// For navigation and category buttons
+function filterByType(type) {
+  const typeSelect = document.getElementById('typeFilter');
+  if (typeSelect) {
+    typeSelect.value = type;
+    displayJobs();
+  }
+}
+
+// Quick search from hero
+function quickSearch() {
+  const heroInput = document.getElementById('heroSearchInput');
+  const mainInput = document.getElementById('searchInput');
+  if (heroInput && mainInput) {
+    mainInput.value = heroInput.value;
+    displayJobs();
+  }
+}
