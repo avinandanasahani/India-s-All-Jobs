@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - IndianJobsPortal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* About page specific styles */
+    .about-hero {
+      background: linear-gradient(135deg, #ff9933, #ff6a00);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .about-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .profile-card {
+      background: white;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: -40px auto 2rem;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff6a00;
+    }
+    .profile-card .info h3 {
+      font-size: 1.8rem;
+      color: #222;
+    }
+    .profile-card .info p {
+      color: #666;
+      margin-top: 0.3rem;
+    }
+    .content-section {
+      background: white;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .content-section h3 {
+      color: #ff6a00;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ff6a00;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .content-section p, .content-section ul {
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .content-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .content-section ul li {
+      padding: 0.4rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .content-section ul li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    @media (max-width: 600px) {
+      .profile-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <h1>🇮🇳 IndianJobs<span class="accent">Portal</span></h1>
+        <p><a href="index.html" style="color:white; text-decoration: underline;">← Back to Jobs</a></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="about-hero">
+    <h2>About IndianJobsPortal</h2>
+    <p>Your trusted source for Sarkari & Private job updates</p>
+  </div>
+
+  <main class="container">
+    <!-- Founder Profile Card -->
+    <div class="profile-card">
+      <img src="images/avinandana.jpg" alt="Avinandana Sahani">
+      <div class="info">
+        <h3>Avinandana Sahani</h3>
+        <p>Founder & CEO, IndianJobsPortal</p>
+        <p>📍 Bihar / Jharkhand, India</p>
+      </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="content-section">
+      <h3>Our Mission</h3>
+      <p>At IndianJobsPortal, we aim to bridge the gap between job seekers and genuine employment opportunities. Every day, thousands of Sarkari and private vacancies are announced across India – our mission is to bring them all to one place, absolutely free. No fees, no hidden charges. Just pure, verified information with direct official apply links.</p>
+    </div>
+
+    <!-- Who We Are Section -->
+    <div class="content-section">
+      <h3>Who We Are</h3>
+      <p>IndianJobsPortal was founded by <strong>Avinandana Sahani</strong>, a passionate tech enthusiast and career mentor who believes that every Indian deserves equal access to job information. What started as a small WhatsApp group sharing job alerts has now grown into a full‑fledged web portal serving millions of aspirants monthly. Our team works round the clock to update the latest notifications from SSC, UPSC, Railways, Banking, PSUs, IT giants, and more.</p>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="content-section">
+      <h3>Why Choose IndianJobsPortal?</h3>
+      <ul>
+        <li>100% free – no subscription, no premium charges.</li>
+        <li>Direct links to official career pages – no middleman.</li>
+        <li>Covers all categories: Govt, Private, Work‑from‑Home, Internships.</li>
+        <li>User‑friendly search & filter to find exactly what you need.</li>
+        <li>Mobile responsive: access from any device, anywhere.</li>
+        <li>Regular updates – we add new vacancies within hours of notification.</li>
+      </ul>
+    </div>
+
+    <!-- Our Team (can add more later) -->
+    <div class="content-section">
+      <h3>Our Team</h3>
+      <p>We are a small but dedicated group of content curators, developers, and designers committed to making job hunting stress‑free. If you wish to join our mission, feel free to contact us.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="about.html">About Us</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+      <p>© 2026 IndianJobsPortal.com | All job listings link to official websites.</p>
+    </div>
+  </footer>
+</body>
+</html>
