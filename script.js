@@ -60,3 +60,22 @@ typeFilter.addEventListener('change', displayJobs);
 
 // Initial load
 displayJobs();
+
+// For navigation and category buttons
+function filterByType(type) {
+  const typeSelect = document.getElementById('typeFilter');
+  if (typeSelect) {
+    typeSelect.value = type;
+    displayJobs();
+  }
+}
+
+// Quick search from hero
+function quickSearch() {
+  const heroInput = document.getElementById('heroSearchInput');
+  const mainInput = document.getElementById('searchInput');
+  if (heroInput && mainInput) {
+    mainInput.value = heroInput.value;
+    displayJobs();
+  }
+}
