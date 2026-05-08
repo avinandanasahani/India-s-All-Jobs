@@ -5,95 +5,213 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indian Jobs Vacancy 2026 | Sarkari & Private Job Alerts</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google AdSense Auto Ads Code yahan paste karo -->
 </head>
 <body>
-  <!-- Top Leaderboard Ad Banner -->
-  <div class="ad-banner top-ad">
-    <span>Ad Space – 728x90</span>
-  </div>
-
-  <!-- Header -->
+  <!-- Header (same) -->
   <header class="header">
     <div class="container header-inner">
       <div class="logo">
         <h1>🇮🇳 IndianJobs<span class="accent">Portal</span></h1>
         <p>Real-time Sarkari & Private Vacancies</p>
       </div>
-      <!-- Simple Navigation -->
       <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">Govt Jobs</a>
-        <a href="#">Private Jobs</a>
-        <a href="#">Internships</a>
+        <a href="#" onclick="filterByType('')">Home</a>
+        <a href="#" onclick="filterByType('Sarkari Naukri')">Govt Jobs</a>
+        <a href="#" onclick="filterByType('Private Job')">Private Jobs</a>
+        <a href="#" onclick="filterByType('Internship')">Internships</a>
       </nav>
     </div>
   </header>
 
-  <div class="container main-layout">
-    <!-- Main Content Area -->
-    <main class="content">
-      <!-- Search & Filters -->
-      <section class="filters-card">
-        <h2>Find Your Dream Job</h2>
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Search by title or company...">
-          <button id="searchBtn">🔍 Search</button>
-        </div>
-        <div class="filter-row">
-          <select id="locationFilter">
-            <option value="">📍 All Locations</option>
-            <!-- Populated from jobs but hardcoded for common ones -->
-            <option value="All India">All India</option>
-            <option value="Across India">Across India</option>
-            <option value="Bengaluru">Bengaluru</option>
-            <option value="Mumbai">Mumbai</option>
-            <option value="Delhi / NCR">Delhi / NCR</option>
-            <option value="Hyderabad">Hyderabad</option>
-            <option value="Pune">Pune</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Work from Home">Work from Home</option>
-            <option value="Uttar Pradesh">Uttar Pradesh</option>
-            <option value="Maharashtra">Maharashtra</option>
-          </select>
-          <select id="typeFilter">
-            <option value="">💼 All Job Types</option>
-            <option value="Sarkari Naukri">Sarkari Naukri</option>
-            <option value="Private Job">Private Job</option>
-            <option value="Internship">Internship</option>
-            <option value="Freelance">Freelance</option>
-          </select>
-        </div>
-      </section>
-
-      <!-- Results Info -->
-      <div class="results-info">
-        Showing <span id="resultCount">0</span> vacancies
-      </div>
-
-      <!-- Job Cards Grid -->
-      <div id="jobsContainer" class="jobs-grid"></div>
-
-      <!-- In-feed Ad after some rows (visible dynamically) -->
-      <div class="infeed-ad">Ad Space – 300x250</div>
-    </main>
-
-    <!-- Right Sidebar for Ads -->
-    <aside class="sidebar">
-      <div class="sticky-ads">
-        <div class="ad-rectangle">Ad Space – 300x250</div>
-        <div class="ad-rectangle">Ad Space – 300x600</div>
-      </div>
-    </aside>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- ➕ HERO SECTION (naya) -->
+  <section class="hero">
     <div class="container">
-      <p>© 2026 IndianJobsPortal.com | All job listings link to official websites.</p>
+      <div class="hero-content">
+        <h2>Find Your Perfect Job Today! 🚀</h2>
+        <p>Explore thousands of verified Sarkari & Private vacancies across India. 100% Free, Always.</p>
+        <div class="hero-stats">
+          <div class="stat-item"><span class="stat-number">32,000+</span> <br>Jobs Listed</div>
+          <div class="stat-item"><span class="stat-number">100%</span> <br>Free Service</div>
+          <div class="stat-item"><span class="stat-number">Direct</span> <br>Official Links</div>
+        </div>
+        <!-- Quick search in hero -->
+        <div class="hero-search">
+          <input type="text" id="heroSearchInput" placeholder="Job title or company...">
+          <button onclick="quickSearch()">🔍 Search Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ➕ FEATURES SECTION (naya) -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose IndianJobsPortal?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Daily Updates</h3>
+          <p>We refresh job listings multiple times a day so you never miss a deadline.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Smart Filters</h3>
+          <p>Search by location, job type, or keyword to find exactly what you need.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Safe & Verified</h3>
+          <p>All links lead to official career pages – no spam, no middlemen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Search & Filters (same) -->
+    <section class="filters-card">
+      <h2>Find Your Dream Job</h2>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search by title or company...">
+        <button id="searchBtn">🔍 Search</button>
+      </div>
+      <div class="filter-row">
+        <select id="locationFilter">
+          <option value="">📍 All Locations</option>
+          <option value="All India">All India</option>
+          <option value="Across India">Across India</option>
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi / NCR">Delhi / NCR</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Pune">Pune</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Work from Home">Work from Home</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+        </select>
+        <select id="typeFilter">
+          <option value="">💼 All Job Types</option>
+          <option value="Sarkari Naukri">Sarkari Naukri</option>
+          <option value="Private Job">Private Job</option>
+          <option value="Internship">Internship</option>
+          <option value="Freelance">Freelance</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Results Info -->
+    <div class="results-info">
+      Showing <span id="resultCount">0</span> vacancies
+    </div>
+
+    <!-- Job Cards Grid -->
+    <div id="jobsContainer" class="jobs-grid"></div>
+
+    <!-- ➕ BROWSE BY CATEGORY (naya) -->
+    <section class="category-section">
+      <h2 class="section-title">📂 Browse by Category</h2>
+      <div class="category-buttons">
+        <button onclick="filterByType('Sarkari Naukri')" class="cat-btn sarkari-btn">🏛️ Sarkari Naukri</button>
+        <button onclick="filterByType('Private Job')" class="cat-btn private-btn">💼 Private Jobs</button>
+        <button onclick="filterByType('Internship')" class="cat-btn intern-btn">🎓 Internships</button>
+        <button onclick="filterByType('Freelance')" class="cat-btn freelance-btn">🌐 Freelance</button>
+      </div>
+    </section>
+
+    <!-- ➕ RECENT ARTICLES / BLOG (naya, adds text) -->
+    <section class="blog-section">
+      <h2 class="section-title">📝 Latest Career Tips</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <h3>How to Crack SSC CGL 2026 in First Attempt</h3>
+          <p>Complete strategy, syllabus, and time‑table for beginners. Learn from toppers' experiences and boost your preparation.</p>
+          <a href="#">Read More →</a>
+        </article>
+        <article class="blog-card">
+          <h3>Top 10 Private Companies Hiring Freshers in 2026</h3>
+          <p>Amazon, TCS, Flipkart, and more are recruiting aggressively. Check eligibility, salary packages, and application process.</p>
+          <a href="#">Read More →</a>
+        </article>
+        <article class="blog-card">
+          <h3>Remote Work vs Office Job: What's Best for You?</h3>
+          <p>Post‑pandemic, many companies offer permanent WFH. We compare pros, cons, and tips to succeed in remote jobs.</p>
+          <a href="#">Read More →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ➕ TESTIMONIALS (naya, dummy) -->
+    <section class="testimonials">
+      <h2 class="section-title">💬 What Job Seekers Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>"IndianJobsPortal helped me find my dream government job. Direct apply link made process super easy!"</p>
+          <strong>– Priya Singh, LIC ADO</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>"I got an internship at Google through this portal. Filters are amazing, and updates are fast!"</p>
+          <strong>– Rohan Kumar, B.Tech CSE</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>"Finally a site that doesn't spam. Only genuine vacancies. Highly recommended for all job aspirants."</p>
+          <strong>– Anjali Gupta, Banking Aspirant</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ➕ FOOTER – stylish multi‑column -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- About Column -->
+      <div class="footer-col">
+        <h3>🇮🇳 IndianJobsPortal</h3>
+        <p>Your trusted job discovery platform. Bringing genuine Sarkari & Private vacancies to your screen, free forever.</p>
+        <div class="social-icons">
+          <span>📘</span> <span>🐦</span> <span>📷</span> <span>▶️</span>
+        </div>
+      </div>
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Latest Jobs</a></li>
+          <li><a href="#">Sarkari Naukri</a></li>
+          <li><a href="#">Private Jobs</a></li>
+          <li><a href="#">Internships</a></li>
+          <li><a href="#">Work from Home</a></li>
+        </ul>
+      </div>
+      <!-- Support Column -->
+      <div class="footer-col">
+        <h4>Support & Legal</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+      <!-- Newsletter / Contact Column -->
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p>Get job alerts on WhatsApp / Email</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <small>(We never spam!)</small>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 IndianJobsPortal.com | All job listings link to official websites. Crafted with ❤️ by Avinandana Sahani</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
